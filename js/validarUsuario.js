@@ -2,7 +2,6 @@
 
 window.addEventListener("load", function() {
     validarUsu();
-    cargarUsuarios();
 });
 
 var urlInicio = "../php/validarTipoUsu.php";
@@ -16,8 +15,6 @@ input.addEventListener('input',function(){
      this.value = this.value.slice(0,10); 
 })
 
-
-var numValidar = 0;
 function validarUsu() {
 
     const http = new XMLHttpRequest();
@@ -33,13 +30,13 @@ function validarUsu() {
                     window.location.href = "../";
                     break;
                 case '1':
-                    numValidar = 1;
+                    cargarUsuarios(1);
                     break;
                 case '2':
-                    numValidar = 2;
+                    cargarUsuarios(2);
                     break;
                 case '3':
-                    numValidar = 3;
+                    cargarUsuarios(3);
                     break;
             }
 
@@ -61,7 +58,7 @@ function validarUsu() {
 var buscar = document.getElementById('buscarUsu');
 buscar.addEventListener("keyup", cargarUsuarios)
 
-function cargarUsuarios() {
+function cargarUsuarios(numValidar) {
 
     var frmB = new FormData(buscar);
     const http = new XMLHttpRequest();
