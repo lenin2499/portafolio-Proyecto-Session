@@ -1,0 +1,127 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(131, 131, 131);
+}
+
+.contenedor {
+    height: 38rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.titulo {
+    margin: 10px auto;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 7px;
+    width: 96%;
+}
+
+.cont-register {
+    width: 30vh;
+    padding: 10px;
+    display: none;
+}
+
+.cont-login {
+
+    width: 30vh;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.mensaje-error-R {
+    color: rgb(230, 230, 230);
+    text-align: center;
+    background-color: brown;
+    padding: 5px;
+    border-radius: 20px;
+    display: none;
+}
+
+.cont {
+    padding-top: 50px;
+    height: 38rem auto;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.cont section div {
+    margin: 0 auto;
+}
+
+#btnCerrar {
+    background-color: rgb(75, 87, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.txtbuscar {
+    width: 320px;
+    margin: 40px 0 10px 10px;
+    padding: 6px;
+}
+
+.tabla {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    background-color: rgb(241, 241, 241);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.tabla thead tr > th {
+    border-bottom: 2px solid;
+}
+
+.tabla tbody tr > th, td {
+    padding-top: 10px; 
+}
+
+.cont-menu {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: auto;
+}
+
+.cont-menu div label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cont-editar {
+    display: none;
+    width: 30vh;
+    text-align: center;
+}
+
+@media (max-width: 687px) {
+
+    .tabla {
+        max-width: 340px;
+        display: block;
+        overflow-x: scroll;
+    }
+    
+}
+
+.btndisabled {
+    color: black;
+    display: none;
+}

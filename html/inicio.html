@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de practica de sesiones</title>
+    <link rel="stylesheet" href="../css/diseño.css">
+
+</head>
+<body>
+
+    <article class="cont">
+        <section class="cont-menu">
+            <div>
+                <label>Nombre: <span id="idNombre"></span></label>
+                <label>Email: <span id="idEmail"></span></label>
+                <label>Rol: <span id="idRol"></span></label>
+                <a href="../php/cerrarSesion.php" id="btnCerrar">Cerrar sesión</a>
+            </div>
+            
+        </section>
+        <section>
+            <div class="cont-editar" id="cont-editar">
+                <form method="post" id="formDatosActualizar">
+                    <p class="mensaje-error-R" id="mensaje-error-R"></p>
+                    <h2>Editar</h2>
+                    <input type="hidden" name="txttoken" id="txttoken">
+                    <label for="txtnombre">Nombres</label>
+                    <input type="text" name="txtnombre" id="txtnombre">
+
+                    <label for="txtapellidos">Apellidos</label>
+                    <input type="text" name="txtapellidos" id="txtapellidos">
+
+                    <label for="txtrol">Rol</label>
+                    <select id="txtrol" name="txtrol" style="width: 100%; margin-bottom: 7px;">
+                    </select>
+
+                    <label for="txttelefono">Telefono</label>
+                    <input type="number" name="txttelefono" maxlength="10" id="txttelefono">
+
+                    <label for="txtemail">Email</label>
+                    <input type="text" name="txtemail" id="txtemail" disabled>
+
+                    <button type="submit" id="btnActualizar">Actualizar</button>
+                    <button type="button" id="btncerrar">Cerrar</button>
+                </form>
+            </div>
+            <div class="cont-tabla">
+                <form id="buscarUsu">
+                    <input type="text" class="txtbuscar" name="buscarUsu" placeholder="Buscar por nombre, apellido, email o telefono.">
+                </form>
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>_#_</th>
+                            <th>_Nombre_</th>
+                            <th>_Apellidos_</th>
+                            <th>_Rol_</th>
+                            <th>_Email_</th>
+                            <th>_Telefono_</th>
+                            <th>_Editar_</th>
+                            <th>_Eliminar_</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <th>1</th>
+                            <td>Nombre</td>
+                            <td>Apellido</td>
+                            <td>Rol</td>
+                            <td>Email</td>
+                            <td>Telefono</td>
+                            <td>Email</td>
+                            <td>Telefono</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </article>
+
+    <script src="../js/validarUsuario.js"></script>
+</body>
+</html>
